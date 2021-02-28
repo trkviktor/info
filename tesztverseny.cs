@@ -15,6 +15,7 @@ namespace tesztverseny
         }
         static void Main(string[] args)
         {
+            //1. feladat
             sor[] eredmenyek = new sor[500];
             StreamReader sr = new StreamReader("valaszok.txt");
             string jovalaszok = sr.ReadLine();
@@ -29,9 +30,9 @@ namespace tesztverseny
             sr.Close();
 
             Console.WriteLine("1. feladat: Az adatok beolvasása\n");
-
+            //2.feladat
             Console.WriteLine("2. feladat: A vetélkedőn {0} versenyző indult\n",db);
-
+            //3.feladat
             Console.Write("3. feladat: A versenyző azonosítója = ");
             string azonosito_ = Console.ReadLine();
             int azonositoindex = 0;
@@ -44,6 +45,7 @@ namespace tesztverseny
                     break;
                 }
             }
+            //4. feladat
             Console.WriteLine("\n4. feladat:\n{0}",jovalaszok);
             for (int i = 0; i < eredmenyek[azonositoindex].valaszok.Length; i++)
             {
@@ -56,7 +58,7 @@ namespace tesztverseny
                     Console.Write(" ");
                 }
             }
-
+            //5. feladat
             Console.Write("\n\n5. feladat: A feladat sorszáma = ");
             string sorszam = Console.ReadLine();
             int sorszam_ = int.Parse(sorszam);
@@ -70,7 +72,7 @@ namespace tesztverseny
             }
             double jovalaszSzazalek = (double) jovalaszok_/db * 100;
             Console.WriteLine("A feladatra {0} fő, a versenyzők {1}%-a adott helyes választ.",jovalaszok_,Math.Round(jovalaszSzazalek,2));
-
+            //6. feladat
             StreamWriter sw = new StreamWriter("E:/infoemelt/programozas/tesztverseny/pontok.txt");
             for (int i = 0; i < db; i++)
             {
@@ -99,7 +101,7 @@ namespace tesztverseny
             sw.Close();
 
             Console.WriteLine("\n6. feladat: A versenyzők pontszámának meghatározása");
-
+            //7. feladat
             Console.WriteLine("7. feladat: A verseny legjobbjai:");
             
 
